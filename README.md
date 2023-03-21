@@ -15,3 +15,5 @@ A simple Cloudflare Worker script to update your IP address using the build-in F
 - `ipv6name=<domain>`
 - `ipv6proxied=[true|false]`
 - `ipv6ttl=1 (auto)`
+
+# ⚠ Work in progress! ⚠
