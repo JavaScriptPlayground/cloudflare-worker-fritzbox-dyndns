@@ -17,3 +17,4 @@ A simple Cloudflare Worker script to update your IP address using the build-in F
 - `ipv6ttl=1 (auto)`
 
 # ⚠ Work in progress! ⚠
+## I am currently working on a good documentation for the script!
