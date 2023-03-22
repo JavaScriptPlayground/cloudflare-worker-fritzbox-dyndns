@@ -33,7 +33,9 @@ Click on "Create Worker" below.
 
 ![image](https://user-images.githubusercontent.com/62719703/227032045-5cac4038-30c9-4581-8ae1-9364c6535043.png)
 
-Then after that you will be taken directly to the "Quick Edit" view of the created Worker. On the left side you can see which code is executed inside the Worker. That means which code is responsible for our DynDNS service in the end.
+Then after that you will be taken directly to the "Quick Edit" view of the created Worker. On the left side you can see which code is executed inside the Worker. That means which code is responsible for our DynDNS service in the end. Now delete the code template example that was automatically added when you created it and replace it [with the code from this repository](./worker.log.js).
+
+After replacing the template with the code from the repository, click on the "Save and deploy" button at the bottom.
 
 ##### Base URL:
 `https://<Worker Subdomain>.<Worker name>.workers.dev/`
