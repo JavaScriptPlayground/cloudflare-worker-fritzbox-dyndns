@@ -3,7 +3,7 @@
 [MyFritz!]: https://en.avm.de/guide/myfritz-secure-access-to-your-data-anytime-anywhere/
 [CloudflareWorkers]: https://www.cloudflare.com/learning/serverless/glossary/serverless-and-cloudflare-workers/
 
-# Cloudflare-Worker-FritzBox-DynDNS
+# Cloudflare Worker Fritz!Box DynDNS
 A simple Cloudflare Worker script to update your IP address using the build-in Fritz!Box DynDNS.
 
 ## Why this script?
