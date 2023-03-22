@@ -1,6 +1,7 @@
 [AVM]: https://en.avm.de/
 [Fritz!Box]: https://en.avm.de/products/fritzbox/
 [MyFritz!]: https://en.avm.de/guide/myfritz-secure-access-to-your-data-anytime-anywhere/
+[CloudflareWorkers]: https://www.cloudflare.com/learning/serverless/glossary/serverless-and-cloudflare-workers/
 
 # Cloudflare-Worker-FritzBox-DynDNS
 A simple Cloudflare Worker script to update your IP address using the build-in Fritz!Box DynDNS.
@@ -15,9 +16,9 @@ Why I did even wrote this script in the first place? There is already a service 
 > If you already have a MyFritz! account from AVM and you are using this account actively, then you can use <a href="https://en.avm.de/service/knowledge-base/dok/FRITZ-Box-7590/1018_Determining-the-MyFRITZ-address-to-directly-access-FRITZ-Box-and-home-network-from-the-internet/">their own DynDNS service</a>, which is provided directly by AVM. 
 
 ## What even is a Cloudflare Worker?
-A Cloudflare Worker is basically just a script that is stored under a certain URL and is executed when this URL is called. Or rather, that's what we use it for. Cloudflare Workers can do so much more. For more info, check out [this overview](https://www.cloudflare.com/learning/serverless/glossary/serverless-and-cloudflare-workers/) to see what else you can use Cloudflare Workers for.
+A Cloudflare Worker is basically just a script that is stored under a certain URL and is executed when this URL is called. Or rather, that's what we use it for. Cloudflare Workers can do so much more. For more info, check out [this overview][CloudflareWorkers] to see what else you can use Cloudflare Workers for.
 
-## Getting started
+## Getting started with the script
 Okay, but now let's begin. In this guide I will explain how you can set up your own DynDNS service using a free Cloudflare Worker. I will go into all the steps that are necessary to create the Worker and how to set the service up correctly.
 
 ##### Base URL:
