@@ -44,6 +44,22 @@ Then after that you will be taken directly to the "Quick Edit" view of the creat
 
 After replacing the template with the code from the repository, click on the "Save and deploy" button at the bottom. If you have done everything right, you should be automatically returned to your account home page. Going again back to the left side in the menu under Workers, you should see your newly created Worker.
 
+![image](https://user-images.githubusercontent.com/62719703/227037626-b7748d8f-902d-4c06-b336-28946f08cac3.png)
+
+### Quick-Edit existing Worker
+You can edit your worker at any time using the "Quick edit" button.
+
+![image](https://user-images.githubusercontent.com/62719703/227038479-6cdafdb6-30d2-4e2c-8ca2-364058a83df4.png)
+
+### Changing Sub-Domain for Workers
+You can also change the sub-domain for all the Workers for your account. To do this, go back to the home page for all workers. Then on the right side you can change the sub-domain.
+
+![image](https://user-images.githubusercontent.com/62719703/227036851-1d33cc56-177e-452f-98e8-46aa88fabdfd.png)
+
+
+# ⚠ Work in progress! ⚠
+## I am currently working on a good documentation for the script!
+
 ##### Base URL:
 `https://<Worker Subdomain>.<Worker name>.workers.dev/`
 
@@ -59,5 +75,3 @@ After replacing the template with the code from the repository, click on the "Sa
 - `ipv6proxied=[true|false]`
 - `ipv6ttl=1 (auto)`
 
-# ⚠ Work in progress! ⚠
-## I am currently working on a good documentation for the script!
