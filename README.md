@@ -25,8 +25,7 @@ To get started you need a Cloudflare Acoount (if you don't already have one). Go
 
 After you log in/register you should land on your dahboard. On the left hand side you should now see a menu point called "Workers". Click on this item. When you create a worker for the very first time you will land on the example page with the "Hello World sample worker" which looks something like this:
 
-![image](https://user-images.githubusercontent.com/62719703/227029747-9128d5e1-86ed-4133-a0b1-b9d1e826681d.png)
-![image](https://user-images.githubusercontent.com/62719703/227029977-e43dca84-e4e6-445e-9204-531856cb3b99.png)
+![image](https://user-images.githubusercontent.com/62719703/227031152-d47203c4-4011-4057-a4c7-c1887737fc2f.png)
 
 
 ##### Base URL:
