@@ -35,6 +35,12 @@ Click on "Create Worker" below.
 
 Then after that you will be taken directly to the "Quick Edit" view of the created Worker. On the left side you can see which code is executed inside the Worker. That means which code is responsible for our DynDNS service in the end. Now delete the code template example that was automatically added when you created it and replace it [with the code from this repository](./worker.log.js).
 
+> <picture>
+>   <source media="(prefers-color-scheme: light)" srcset="https://github.com/Mqxx/GitHub-Markdown/blob/main/blockquotes/badge/light-theme/info.svg">
+>   <img alt="Info" src="https://github.com/Mqxx/GitHub-Markdown/blob/main/blockquotes/badge/dark-theme/info.svg">
+> </picture><br>
+> Optionally you can also use the <a href="./worker.min.js">minified version</a> of the script.
+
 After replacing the template with the code from the repository, click on the "Save and deploy" button at the bottom.
 
 ##### Base URL:
