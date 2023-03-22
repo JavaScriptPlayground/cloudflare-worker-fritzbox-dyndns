@@ -13,7 +13,7 @@ Why I did even wrote this script in the first place? There is already a service 
 >   <source media="(prefers-color-scheme: light)" srcset="https://github.com/Mqxx/GitHub-Markdown/blob/main/blockquotes/badge/light-theme/info.svg">
 >   <img alt="Info" src="https://github.com/Mqxx/GitHub-Markdown/blob/main/blockquotes/badge/dark-theme/info.svg">
 > </picture><br>
-> If you already have a MyFritz! account from AVM and you are using this account actively, then you can use their own DynDNS service, which is provided directly by AVM. Check out the link below for mor information.
+> If you already have a MyFritz! account from AVM and you are using this account actively, then you can use their own DynDNS service, which is provided directly by AVM. Check out the link below for mor information. [link]()
 [MyFritz! DynDNS][DynDNS]
 
 ## What even is a Cloudflare Worker?
