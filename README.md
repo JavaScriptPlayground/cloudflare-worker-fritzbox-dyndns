@@ -21,6 +21,14 @@ A Cloudflare Worker is basically just a script that is stored under a certain UR
 ## Getting started with the script
 Okay, but now let's begin. In this guide I will explain how you can set up your own DynDNS service using a free Cloudflare Worker. I will go into all the steps that are necessary to create the Worker and how to set the service up correctly.
 
+To get started you need a Cloudflare Acoount (if you don't already have one). Go to [dash.cloudflare.com/sign-up](https://dash.cloudflare.com/sign-up) to sign up or sign in with an existing account at [dash.cloudflare.com/login](https://dash.cloudflare.com/login).
+
+After you log in/register you should land on your dahboard. On the left hand side you should now see a menu point called "Workers". Click on this item. When you create a worker for the very first time you will land on the example page with the "Hello World sample worker" which looks something like this:
+
+![image](https://user-images.githubusercontent.com/62719703/227029747-9128d5e1-86ed-4133-a0b1-b9d1e826681d.png)
+![image](https://user-images.githubusercontent.com/62719703/227029977-e43dca84-e4e6-445e-9204-531856cb3b99.png)
+
+
 ##### Base URL:
 `https://<Worker Subdomain>.<Worker name>.workers.dev/`
 
