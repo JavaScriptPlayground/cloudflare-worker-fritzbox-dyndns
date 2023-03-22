@@ -42,7 +42,7 @@ Then after that you will be taken directly to the "Quick Edit" view of the creat
 > </picture><br>
 > Optionally you can also use the <a href="./worker.min.js">minified version</a> of the script.
 
-After replacing the template with the code from the repository, click on the "Save and deploy" button at the bottom. If you have done everything right, you should be automatically returned to your account home page.
+After replacing the template with the code from the repository, click on the "Save and deploy" button at the bottom. If you have done everything right, you should be automatically returned to your account home page. Going again back to the left side in the menu under Workers, you should see your newly created Worker.
 
 ##### Base URL:
 `https://<Worker Subdomain>.<Worker name>.workers.dev/`
