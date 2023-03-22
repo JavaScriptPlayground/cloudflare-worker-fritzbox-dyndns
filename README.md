@@ -57,6 +57,8 @@ You can also change the sub-domain for all the Workers for your account. To do t
 ![image](https://user-images.githubusercontent.com/62719703/227036851-1d33cc56-177e-452f-98e8-46aa88fabdfd.png)
 
 
+## Using the script/request URL
+
 # ⚠ Work in progress! ⚠
 ## I am currently working on a good documentation for the script!
 
