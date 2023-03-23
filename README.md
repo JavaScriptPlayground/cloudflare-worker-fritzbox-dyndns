@@ -102,7 +102,7 @@ The following parameters can be used in the URL:
 | `ipv4proxied` |  boolean |    no    | true          | If the IPv4 connection should be proxied                        |
 |   `ipv4ttl`   |  number  |    no    | 1             | IPv4 Time to live (1 = Auto, 60-86400 = Valid range)            |
 | `ipv6address` |  string  |    no    | ""            | IPv6 address to update                                          |
-|   `ipv6name`  |  string  |  (yes)[*](./readme.md## "*Only required if 'ipv6address' is specified")  | ""            | IPv6 domain name (*Only required if `ipv6address` is specified) |
+|   `ipv6name`  |  string  |  (yes)[*](README.md## "*Only required if 'ipv6address' is specified")  | ""            | IPv6 domain name (*Only required if `ipv6address` is specified) |
 | `ipv6proxied` |  boolean |    no    | true          | If the IPv6 connection should be prodied                        |
 |   `ipv6ttl`   |  number  |    no    | 1             | IPv6 Time to live (1 = Auto, 60-86400 = Valid range)            |
 |   `comment`   |  string  |    no    | ""            | Comment for the created/updated record                          |
