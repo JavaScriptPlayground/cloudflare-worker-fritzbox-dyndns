@@ -9,6 +9,9 @@
 # Cloudflare Worker Fritz!Box DynDNS
 A simple Cloudflare Worker script to update your IP address using the build-in Fritz!Box DynDNS.
 
+# ⚠ Work in progress! ⚠
+## I am currently working on a good documentation for the script!
+
 ## Why this script?
 Why I did even wrote this script in the first place? There is already a service from [AVM] (the company behind [Fritz!Box]) called [MyFritz!] which does exactly that... Well, since I manage my domains with Cloudflare, I wanted to avoid an extra service where I need an extra account again. And since I already manage my domains via Cloudflare, I chose a Cloudflare Worker.
 
@@ -78,19 +81,19 @@ Next, we'll look at how to properly use the Worker's request URL. We will also t
 
 The following parameters can be used in the URL:
 
-|   Parameter   | Datatype | Required | Description                                                     |
-|:-------------:|:--------:|:--------:|:----------------------------------------------------------------|
-|    `token`    |  string  |    yes   | Token for the Cloudflare API                                    |
-|    `zoneid`   |  string  |    yes   | ID for the DNS Zone                                             |
-| `ipv4address` |  string  |    yes   | IPv4 address to update                                          |
-|   `ipv4name`  |  string  |    yes   | IPv4 domain name                                                |
-| `ipv4proxied` |  boolean |    no    | If the IPv4 connection should be proxied                        |
-|   `ipv4ttl`   |  number  |    no    | IPv4 Time to live (1 = Auto, 60-86400 = Valid range)            |
-| `ipv6address` |  string  |    no    | IPv6 address to update                                          |
-|   `ipv6name`  |  string  |  (yes)*  | IPv6 domain name (*Only required if `ipv6address` is specified) |
-| `ipv6proxied` |  boolean |    no    | If the IPv6 connection should be prodied                        |
-|   `ipv6ttl`   |  number  |    no    | IPv6 Time to live (1 = Auto, 60-86400 = Valid range)            |
-|   `comment`   |  string  |    no    | Comment for the created/updated record                          |
+|   Parameter   | Datatype | Required | Default Value | Description                                                     |
+|:-------------:|:--------:|:--------:|---------------|-----------------------------------------------------------------|
+|    `token`    |  string  |    yes   | ""            | Token for the Cloudflare API                                    |
+|    `zoneid`   |  string  |    yes   | ""            | ID for the DNS Zone                                             |
+| `ipv4address` |  string  |    yes   | ""            | IPv4 address to update                                          |
+|   `ipv4name`  |  string  |    yes   | ""            | IPv4 domain name                                                |
+| `ipv4proxied` |  boolean |    no    | true          | If the IPv4 connection should be proxied                        |
+|   `ipv4ttl`   |  number  |    no    | 1             | IPv4 Time to live (1 = Auto, 60-86400 = Valid range)            |
+| `ipv6address` |  string  |    no    | ""            | IPv6 address to update                                          |
+|   `ipv6name`  |  string  |  (yes)*  | ""            | IPv6 domain name (*Only required if `ipv6address` is specified) |
+| `ipv6proxied` |  boolean |    no    | true          | If the IPv6 connection should be prodied                        |
+|   `ipv6ttl`   |  number  |    no    | 1             | IPv6 Time to live (1 = Auto, 60-86400 = Valid range)            |
+|   `comment`   |  string  |    no    | ""            | Comment for the created/updated record                          |
 
 Parameters are simply appended to the request URL with a `?`. Between the parameters are `&` characters. For more information, please reference to [this article from MDN][encodeURI] on how to properly encode URL parameters.
 
@@ -118,24 +121,24 @@ For more information please reference to [this knowledge base][DynDNS-knowledge-
 > `https://random-name.your-account.workers.dev?token=abc1234&zoneid=1234&ipv4address=<ipaddr>&ipv4name=example.com&comment=This%20is%20a%20comment`<br>
 >
 > Or with more placeholders:<br>
-> `https://random-name.your-account.workers.dev?token=<passwd>&zoneid=<username>&ipv4address=<ipaddr>&ipv4name=<domain>&comment=This%20is%20a%20comment`<br>
+> `https://random-name.your-account.workers.dev?token=<passwd>&zoneid=<username>&ipv4address=<ipaddr>&ipv4name=<domain>&comment=This%20is%20a%20comment%20from:<useragent>`<br>
 > Now you can put your credentials inside the password and username field.
 
-# ⚠ Work in progress! ⚠
-## I am currently working on a good documentation for the script!
 
-##### Base URL:
-`https://<Worker Subdomain>.<Worker name>.workers.dev/`
 
-##### URL parameters:
-- `token=<pass>`
-- `zoneID=<username>`
-- `ipv4address=<ipaddr>`
-- `ipv4name=<domain>`
-- `ipv4proxied=[true|false]`
-- `ipv4ttl=1 (auto)`
-- `ipv6address=<ip6addr>`
-- `ipv6name=<domain>`
-- `ipv6proxied=[true|false]`
-- `ipv6ttl=1 (auto)`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
