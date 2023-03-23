@@ -78,7 +78,7 @@ Next, we'll look at how to properly use the Worker's request URL. We will also t
 
 The following parameters can be used in the URL:
 
-|   Parameter   | Datatype | Required |                           Description                           |
+|   Parameter   | Datatype | Required | Description                                                     |
 |:-------------:|:--------:|:--------:|:----------------------------------------------------------------|
 |    `token`    |  string  |    yes   | Token for the Cloudflare API                                    |
 |    `zoneid`   |  string  |    yes   | ID for the DNS Zone                                             |
@@ -96,17 +96,18 @@ Parameters are simply appended to the request URL with a `?`. Between the parame
 
 Furthermore, there are a few placeholders which are automatically replaced by the Fritz!Box:
 
-|      Parameter      |          Description          |
-|:-------------------:|:------------------------------|
-|     `<username>`    | Username                      |
-| `<pass>`/`<passwd>` | Password (Token)              |
-|      `<domain>`     | Domain                        |
-|      `<ipaddr>`     | IPv4 address of the Fritz!Box |
-|     `<ip6addr>`     | IPv6 address of the Fritz!Box |
-|   `<ip6lanprefix>`  | IPv6 prefix for home network  |
-|    `<dualstack>`    | Dual-stack                    |
+|      Parameter      | Description                                                                                                       |
+|:-------------------:|:------------------------------------------------------------------------------------------------------------------|
+|     `<username>`    | Username                                                                                                          |
+| `<pass>`/`<passwd>` | Password (Token)                                                                                                  |
+|      `<domain>`     | Domain                                                                                                            |
+|      `<ipaddr>`     | IPv4 address of the Fritz!Box                                                                                     |
+|     `<ip6addr>`     | IPv6 address of the Fritz!Box                                                                                     |
+|   `<ip6lanprefix>`  | IPv6 prefix for home network                                                                                      |
+|    `<dualstack>`    | Dual-stack                                                                                                        |
+|    `<useragent>`*   | Device that sends the request (*This is not directly from Fritz!Box, <br>it is implemented via the Worker script) |
 
-For more information please reference to [this knowledge base][DynDNS-knowledge-base] from AVM
+For more information please reference to [this knowledge base][DynDNS-knowledge-base] from AVM.
 
 > <picture>
 >   <source media="(prefers-color-scheme: light)" srcset="https://github.com/Mqxx/GitHub-Markdown/blob/main/blockquotes/badge/light-theme/info.svg"/>
