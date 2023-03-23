@@ -2,6 +2,8 @@
 [Fritz!Box]: https://en.avm.de/products/fritzbox/
 [MyFritz!]: https://en.avm.de/guide/myfritz-secure-access-to-your-data-anytime-anywhere/
 [CloudflareWorkers]: https://www.cloudflare.com/learning/serverless/glossary/serverless-and-cloudflare-workers/
+[DynDNS]: https://en.avm.de/service/knowledge-base/dok/FRITZ-Box-7590/1018_Determining-the-MyFRITZ-address-to-directly-access-FRITZ-Box-and-home-network-from-the-internet/
+[encodeURI]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI
 
 # Cloudflare Worker Fritz!Box DynDNS
 A simple Cloudflare Worker script to update your IP address using the build-in Fritz!Box DynDNS.
@@ -13,7 +15,8 @@ Why I did even wrote this script in the first place? There is already a service 
 >   <source media="(prefers-color-scheme: light)" srcset="https://github.com/Mqxx/GitHub-Markdown/blob/main/blockquotes/badge/light-theme/info.svg">
 >   <img alt="Info" src="https://github.com/Mqxx/GitHub-Markdown/blob/main/blockquotes/badge/dark-theme/info.svg">
 > </picture><br>
-> If you already have a MyFritz! account from AVM and you are using this account actively, then you can use <a href="https://en.avm.de/service/knowledge-base/dok/FRITZ-Box-7590/1018_Determining-the-MyFRITZ-address-to-directly-access-FRITZ-Box-and-home-network-from-the-internet/">their own DynDNS service</a>, which is provided directly by AVM. 
+>
+> If you already have a MyFritz! account from AVM and you are using this account actively, then you can use [their own DynDNS service][DynDNS], which is provided directly by AVM. 
 
 ## What even is a Cloudflare Worker?
 A Cloudflare Worker is basically just a script that is stored under a certain URL and is executed when this URL is called. Or rather, that's what we use it for. Cloudflare Workers can do so much more. For more info, check out [this overview][CloudflareWorkers] to see what else you can use Cloudflare Workers for.
@@ -40,7 +43,8 @@ Then after that you will be taken directly to the "Quick Edit" view of the creat
 >   <source media="(prefers-color-scheme: light)" srcset="https://github.com/Mqxx/GitHub-Markdown/blob/main/blockquotes/badge/light-theme/info.svg">
 >   <img alt="Info" src="https://github.com/Mqxx/GitHub-Markdown/blob/main/blockquotes/badge/dark-theme/info.svg">
 > </picture><br>
-> Optionally you can also use the <a href="./worker.min.js">minified version</a> of the script.
+> 
+> Optionally you can also use the [minified version](./worker.min.js) of the script.
 
 After replacing the template with the code from the repository, click on the "Save and deploy" button at the bottom. If you have done everything right, you should be automatically returned to your account home page. Going again back to the left side in the menu under Workers, you should see your newly created Worker.
 
@@ -58,6 +62,44 @@ You can also change the sub-domain for all the Workers for your account. To do t
 
 
 ## Using the script/request URL
+Next, we'll look at how to properly use the Worker's request URL. We will also take a look at how to correctly enter the update URL into your Fritz!Box. Let's look at the basic structure of the request URL. The URL is structured as follows:
+
+| Worker subdomain | Account name | Cloudflare Worker domain |
+|:----------------:|:------------:|:------------------------:|
+|  `<subdomain>`   |   `<name>`   |      `workers.dev/`      |
+
+> <picture>
+>   <source media="(prefers-color-scheme: light)" srcset="https://github.com/Mqxx/GitHub-Markdown/blob/main/blockquotes/badge/light-theme/info.svg"/>
+>   <img alt="Info" src="https://github.com/Mqxx/GitHub-Markdown/blob/main/blockquotes/badge/dark-theme/info.svg"/>
+> </picture><br>
+>
+> An example would look like this: `https://random-name.your-account.workers.dev`
+
+The following parameters can be used in the URL:
+
+|   Parameter   | Datatype | Required |                           Description                           |
+|:-------------:|:--------:|:--------:|:----------------------------------------------------------------|
+|    `token`    |  string  |    yes   | Token for the Cloudflare API                                    |
+|    `zoneid`   |  string  |    yes   | ID for the DNS Zone                                             |
+| `ipv4address` |  string  |    yes   | IPv4 address to update                                          |
+|   `ipv4name`  |  string  |    yes   | IPv4 domain name                                                |
+| `ipv4proxied` |  boolean |    no    | If the IPv4 connection should be proxied                        |
+|   `ipv4ttl`   |  number  |    no    | IPv4 Time to live (1 = Auto, 60-86400 = Valid range)            |
+| `ipv6address` |  string  |    no    | IPv6 address to update                                          |
+|   `ipv6name`  |  string  |  (yes)*  | IPv6 domain name (*Only required if `ipv6address` is specified) |
+| `ipv6proxied` |  boolean |    no    | If the IPv6 connection should be prodied                        |
+|   `ipv6ttl`   |  number  |    no    | IPv6 Time to live (1 = Auto, 60-86400 = Valid range)            |
+|   `comment`   |  string  |    no    | Comment for the created/updated record                          |
+
+Parameters are simply appended to the request URL with a `?`. Between the parameters are `&` characters. For more information, please reference [this article from MDN][encodeURI] on how to properly encode URL parameters.
+
+> <picture>
+>   <source media="(prefers-color-scheme: light)" srcset="https://github.com/Mqxx/GitHub-Markdown/blob/main/blockquotes/badge/light-theme/info.svg"/>
+>   <img alt="Info" src="https://github.com/Mqxx/GitHub-Markdown/blob/main/blockquotes/badge/dark-theme/info.svg"/>
+> </picture><br>
+>
+> An example with the parameters would look like this:<br>
+> `https://random-name.your-account.workers.dev?token=abc1234&zoneid=1234&ipv4address=<ipaddr>&ipv4name=example.com`
 
 # ⚠ Work in progress! ⚠
 ## I am currently working on a good documentation for the script!
