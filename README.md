@@ -4,6 +4,7 @@
 [CloudflareWorkers]: https://www.cloudflare.com/learning/serverless/glossary/serverless-and-cloudflare-workers/
 [DynDNS]: https://en.avm.de/service/knowledge-base/dok/FRITZ-Box-7590/1018_Determining-the-MyFRITZ-address-to-directly-access-FRITZ-Box-and-home-network-from-the-internet/
 [encodeURI]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI
+[DynDNS-knowledge-base]: https://en.avm.de/service/knowledge-base/dok/FRITZ-Box-7590/30_Setting-up-dynamic-DNS-in-the-FRITZ-Box/
 
 # Cloudflare Worker Fritz!Box DynDNS
 A simple Cloudflare Worker script to update your IP address using the build-in Fritz!Box DynDNS.
@@ -91,7 +92,21 @@ The following parameters can be used in the URL:
 |   `ipv6ttl`   |  number  |    no    | IPv6 Time to live (1 = Auto, 60-86400 = Valid range)            |
 |   `comment`   |  string  |    no    | Comment for the created/updated record                          |
 
-Parameters are simply appended to the request URL with a `?`. Between the parameters are `&` characters. For more information, please reference [this article from MDN][encodeURI] on how to properly encode URL parameters.
+Parameters are simply appended to the request URL with a `?`. Between the parameters are `&` characters. For more information, please reference to [this article from MDN][encodeURI] on how to properly encode URL parameters.
+
+Furthermore, there are a few placeholders which are automatically replaced by the Fritz!Box:
+
+|      Parameter      |          Description          |
+|:-------------------:|:------------------------------|
+|     `<username>`    | Username                      |
+| `<pass>`/`<passwd>` | Password (Token)              |
+|      `<domain>`     | Domain                        |
+|      `<ipaddr>`     | IPv4 address of the Fritz!Box |
+|     `<ip6addr>`     | IPv6 address of the Fritz!Box |
+|   `<ip6lanprefix>`  | IPv6 prefix for home network  |
+|    `<dualstack>`    | Dual-stack                    |
+
+For more information please reference to [this knowledge base][DynDNS-knowledge-base] from AVM
 
 > <picture>
 >   <source media="(prefers-color-scheme: light)" srcset="https://github.com/Mqxx/GitHub-Markdown/blob/main/blockquotes/badge/light-theme/info.svg"/>
@@ -99,7 +114,11 @@ Parameters are simply appended to the request URL with a `?`. Between the parame
 > </picture><br>
 >
 > An example with the parameters would look like this:<br>
-> `https://random-name.your-account.workers.dev?token=abc1234&zoneid=1234&ipv4address=<ipaddr>&ipv4name=example.com`
+> `https://random-name.your-account.workers.dev?token=abc1234&zoneid=1234&ipv4address=<ipaddr>&ipv4name=example.com&comment=This%20is%20a%20comment`<br>
+>
+> Or with more placeholders:<br>
+> `https://random-name.your-account.workers.dev?token=<passwd>&zoneid=<username>&ipv4address=<ipaddr>&ipv4name=<domain>&comment=This%20is%20a%20comment`<br>
+> Now you can put your credentials inside the password and username field.
 
 # ⚠ Work in progress! ⚠
 ## I am currently working on a good documentation for the script!
