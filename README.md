@@ -121,7 +121,7 @@ Next, we'll look at how to properly use the Worker's request URL. We will also t
 >   <img alt="Info" src="https://github.com/Mqxx/GitHub-Markdown/blob/main/blockquotes/badge/dark-theme/example.svg"/>
 > </picture><br>
 >
-> An example would look like this: `https://random-name.your-account.workers.dev`
+> An example would look like this: `https://random-name.your-account.workers.dev/`
 
 The following parameters can be used in the URL:
 
