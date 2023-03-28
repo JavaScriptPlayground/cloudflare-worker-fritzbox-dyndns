@@ -177,21 +177,8 @@ For more information please reference to [this knowledge base][DynDNS-knowledge-
 > `https://random-name.your-account.workers.dev?token=<passwd>&zoneid=<username>&ipv4address=<ipaddr>&ipv4name=<domain>&comment=This%20is%20a%20comment%20from:<useragent>`<br>
 > Now you can put your credentials inside the password and username field.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
