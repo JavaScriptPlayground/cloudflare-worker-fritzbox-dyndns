@@ -110,7 +110,10 @@ Now you can copy your token and use it for the Worker.
 ----
 
 ## Using the script/request URL
-Next, we'll look at how to properly use the Worker's request URL. We will also take a look at how to correctly enter the update URL into your Fritz!Box. Let's look at the basic structure of the request URL. The URL is structured as follows:
+Next, we'll look at how to properly use the Worker's request URL. We will also take a look at how to correctly enter the update URL into your Fritz!Box. 
+
+### Basic URL structure
+Let's look at the basic structure of the request URL. The URL is structured as follows:
 
 | Worker subdomain | Account name | Cloudflare Worker domain |
 |:----------------:|:------------:|:------------------------:|
@@ -122,6 +125,8 @@ Next, we'll look at how to properly use the Worker's request URL. We will also t
 > </picture><br>
 >
 > An example would look like this: `https://random-name.your-account.workers.dev/`
+
+### URL parameters
 
 The following parameters can be used in the URL:
 
@@ -143,6 +148,7 @@ The following parameters can be used in the URL:
 
 Parameters are simply appended to the request URL with a `?`. Between the parameters are `&` characters. For more information, please reference to [this article from MDN][encodeURI] on how to properly encode URL parameters.
 
+### Placeholders
 Furthermore, there are a few placeholders which are automatically replaced by the Fritz!Box:
 
 |      Parameter       | Description                                                                                                       |
