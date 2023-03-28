@@ -40,11 +40,11 @@ To get started you need a Cloudflare Acoount (if you don't already have one). Go
 ### Create first Worker
 After you log in/register you should land on your dahboard. On the left hand side you should now see a menu point called "Workers". Click on this item. When you create a worker for the very first time you will land on the example page with the "Hello World sample worker" which looks something like this:
 
-![image](https://user-images.githubusercontent.com/62719703/227031152-d47203c4-4011-4057-a4c7-c1887737fc2f.png)
+![Build your first Worker](https://user-images.githubusercontent.com/62719703/227031152-d47203c4-4011-4057-a4c7-c1887737fc2f.png)
 
 Click on "Create Worker" below.
 
-![image](https://user-images.githubusercontent.com/62719703/227032045-5cac4038-30c9-4581-8ae1-9364c6535043.png)
+![Create Worker](https://user-images.githubusercontent.com/62719703/227032045-5cac4038-30c9-4581-8ae1-9364c6535043.png)
 
 ### Edit Worker
 Then after that you will be taken directly to the "Quick Edit" view of the created Worker. On the left side you can see which code is executed inside the Worker. That means which code is responsible for our DynDNS service in the end. Now delete the code template example that was automatically added when you created it and replace it [with the code from this repository](./worker.log.js).
@@ -58,22 +58,31 @@ Then after that you will be taken directly to the "Quick Edit" view of the creat
 
 After replacing the template with the code from the repository, click on the "Save and deploy" button at the bottom. If you have done everything right, you should be automatically returned to your account home page. Going again back to the left side in the menu under Workers, you should see your newly created Worker.
 
-![image](https://user-images.githubusercontent.com/62719703/227037626-b7748d8f-902d-4c06-b336-28946f08cac3.png)
+![Newly created Worker](https://user-images.githubusercontent.com/62719703/227037626-b7748d8f-902d-4c06-b336-28946f08cac3.png)
 
 ### Quick-Edit existing Worker
 You can edit your worker at any time using the "Quick edit" button.
 
-![image](https://user-images.githubusercontent.com/62719703/227038479-6cdafdb6-30d2-4e2c-8ca2-364058a83df4.png)
+![Worker overview](https://user-images.githubusercontent.com/62719703/227038479-6cdafdb6-30d2-4e2c-8ca2-364058a83df4.png)
 
 ### Changing Sub-Domain for Workers
 You can also change the sub-domain for all the Workers for your account. To do this, go back to the home page for all workers. Then on the right side you can change the sub-domain.
 
-![image](https://user-images.githubusercontent.com/62719703/227036851-1d33cc56-177e-452f-98e8-46aa88fabdfd.png)
+![Change subdomain](https://user-images.githubusercontent.com/62719703/227036851-1d33cc56-177e-452f-98e8-46aa88fabdfd.png)
 
 ----
 
 ## Get and configure Cloudflare API Token
-### TODO:
+Next, we'll look at how you can generate an API token for your Cloudflare account. To do this, log into your account and go to your profile, at [dash.cloudflare.com/profile](https://dash.cloudflare.com/profile).
+
+![My Profile](https://user-images.githubusercontent.com/62719703/228295030-ffb1bdec-964a-4323-baf1-e013b8ea8ec3.png)
+
+On the left side navigate to "API Tokens", under [dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens).
+
+![Create API Token](https://user-images.githubusercontent.com/62719703/228299225-87c3178d-52e2-4969-9749-1c87dba5cfe1.png)
+
+
+### Generate API Token
 
 ----
 
