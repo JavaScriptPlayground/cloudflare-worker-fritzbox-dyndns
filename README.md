@@ -164,7 +164,7 @@ Furthermore, there are a few placeholders which are automatically replaced by th
 
 [*2]: README.md## "*This is not directly from Fritz!Box,&#013;it is implemented via the Worker script"
 
-For more information please reference to [this knowledge base][DynDNS-knowledge-base] from AVM.
+For more information please reference to [this knowledge base][DynDNS-knowledge-base] from AVM on "2 Setting up dynamic DNS".
 
 > <picture>
 >   <source media="(prefers-color-scheme: light)" srcset="https://github.com/Mqxx/GitHub-Markdown/blob/main/blockquotes/badge/light-theme/example.svg"/>
