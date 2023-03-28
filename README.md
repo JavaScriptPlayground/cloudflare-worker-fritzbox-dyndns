@@ -79,10 +79,33 @@ Next, we'll look at how you can generate an API token for your Cloudflare accoun
 
 On the left side navigate to "API Tokens", under [dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens).
 
+### Generate API Token
+
+Now we will create a new API token. If you already have an API token from Cloudflare and it has the necessary permissions, then you can use this token.
+
+Click on "Create Token"
+
 ![Create API Token](https://user-images.githubusercontent.com/62719703/228299225-87c3178d-52e2-4969-9749-1c87dba5cfe1.png)
 
+Next, we will create a "Custom token" with the necessary permissions. To do this, click on Create Custom Token "Get started".
 
-### Generate API Token
+![Create custom token](https://user-images.githubusercontent.com/62719703/228302934-30c4a3c4-840d-4eb3-bd7e-e0127faba203.png)
+
+Give the token a name and then set these permissions for the token. You can also add more permissions, the important thing is that the token can be used to access your zone or the gateway API in the end.
+
+![Set permissions](https://user-images.githubusercontent.com/62719703/228305628-6fc62e5d-6722-42dd-b72a-4fbe5893864c.png)
+
+Confirm the settings by clicking on "Continue to summary" below.
+
+![Continue to summary](https://user-images.githubusercontent.com/62719703/228307119-a77f620a-2bc2-4a49-8b5b-df40e10e64ad.png)
+
+Your summary should look similar to this. If so click on "Create Token"
+
+![Create Token](https://user-images.githubusercontent.com/62719703/228308828-0e77522a-1128-4b9b-a4c1-ab262ef9154d.png)
+
+Now you can copy your token and use it for the Worker.
+
+![API-Token](https://user-images.githubusercontent.com/62719703/228312145-2fd97ea5-ffc8-444a-8bd6-888e9007bf7b.png)
 
 ----
 
