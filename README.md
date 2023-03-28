@@ -9,9 +9,6 @@
 # Cloudflare Worker Fritz!Box DynDNS
 A simple Cloudflare Worker script to update your IP address using the build-in Fritz!Box DynDNS.
 
-# ⚠ Work in progress! ⚠
-## I am currently working on a good documentation for the script!
-
 ----
 
 ## Why this script?
