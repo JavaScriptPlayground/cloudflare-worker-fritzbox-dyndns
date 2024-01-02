@@ -132,7 +132,7 @@ The following parameters can be used in the URL:
 |   Parameter   | Datatype |   Required   | Default Value | Description                                                     |
 |:-------------:|:--------:|:------------:|---------------|-----------------------------------------------------------------|
 |    `token`    |  string  |      yes     | ""            | Token for the Cloudflare API                                    |
-|    `zoneid`   |  string  |      yes     | ""            | ID for the DNS Zone                                             |
+|    `zoneID`   |  string  |      yes     | ""            | ID for the DNS Zone                                             |
 | `ipv4address` |  string  |      yes     | ""            | IPv4 address to update                                          |
 |   `ipv4name`  |  string  |      yes     | ""            | IPv4 domain name                                                |
 | `ipv4proxied` |  boolean |      no      | true          | If the IPv4 connection should be proxied                        |
