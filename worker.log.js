@@ -10,7 +10,7 @@ export default {
             // API token for Cloudflare
             token: searchParams.get("token") || '',
             // The zone ID where the DNS entry should be added/edited (Cloudflare Dashboard > [Your Domain] > Overview > [In the right section, under API])
-            zoneID: searchParams.get("zoneID") || '',
+            zoneID: searchParams.get("zoneid") || '',
             // The comment for the added/updated record
             comment: searchParams.get("comment") || '',
             // IPv4 parameters
